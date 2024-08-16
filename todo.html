@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG1vdGl2YXRpb258ZW58MHx8fHwxNjk2OTgyMjQw&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #container {
+            width: 400px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+        input[type="text"]::placeholder {
+            color: #ccc;
+        }
+        button {
+            width: calc(100% - 22px);
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .todo-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            color: #fff;
+        }
+        .todo-item h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #f9f9f9;
+        }
+        .todo-item p {
+            margin: 5px 0 10px 0;
+            font-size: 14px;
+            color: #ddd;
+        }
+        .done {
+            background-color: rgba(40, 167, 69, 0.3);
+            border-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input id="title" type="text" placeholder="Title">
+        <input id="description" type="text" placeholder="Description">
+        <button onclick="addTodo()">Add</button>
+        <div id="todo-list"></div>
+    </div>
+    <script>
+        let globalId = 1;
+
+        function addTodo() {
+            const title = document.getElementById("title").value;
+            const description = document.getElementById("description").value;
+            const parent = document.getElementById("todo-list");
+            parent.appendChild(createTodoItem(title, description, globalId++));
+        }
+
+        function createTodoItem(title, description, id) {
+            const todoItem = document.createElement("div");
+            todoItem.setAttribute("id", `todo-${id}`);
+            todoItem.classList.add("todo-item");
+
+            const titleElement = document.createElement("h3");
+            titleElement.innerHTML = title;
+            
+            const descriptionElement = document.createElement("p");
+            descriptionElement.innerHTML = description;
+
+            const button = document.createElement("button");
+            button.innerHTML = "Mark as Done!";
+            button.setAttribute("onclick", `markToDone(${id})`);
+            todoItem.appendChild(titleElement);
+            todoItem.appendChild(descriptionElement);
+            todoItem.appendChild(button);
+
+            return todoItem;
+        }
+
+        function markToDone(id) {
+            const todoItem = document.getElementById(`todo-${id}`);
+            const button = todoItem.querySelector("button");
+            todoItem.classList.add("done");
+            button.innerHTML = "Done!!!";
+            button.disabled = true;
+        }
+    </script>
+</body>
+</html>
