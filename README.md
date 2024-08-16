@@ -2,7 +2,7 @@
 
 **MotivateTODO** is a responsive TODO list application designed to inspire action and manage tasks efficiently. With a motivational background and intuitive interface, it helps you keep track of your to-do items and mark them as done with ease.
 
-![MotivateTODO Preview](https://github.com/Mahesh7741/MovereFac-TODO/blob/ddf59e635a03ef230c179bb9056fe7c4af5188ca/assets/interface.png)  
+<img src="https://github.com/Mahesh7741/MovereFac-TODO/blob/ddf59e635a03ef230c179bb9056fe7c4af5188ca/assets/interface.png" alt="MotivateTODO Preview" width="800" height="400"/>  
 *MotivateTODO main interface*
 
 ## Features
@@ -14,11 +14,11 @@
 ## Screenshots
 
 ### Main Interface
-![Main Interface](https://github.com/Mahesh7741/MovereFac-TODO/blob/ddf59e635a03ef230c179bb9056fe7c4af5188ca/assets/main.png)  
+<img src="https://github.com/Mahesh7741/MovereFac-TODO/blob/ddf59e635a03ef230c179bb9056fe7c4af5188ca/assets/main.png" alt="Main Interface" width="800" height="400"/>  
 *View of the TODO list with motivational background*
 
 ### Task Completion
-![Task Completion](https://github.com/Mahesh7741/MovereFac-TODO/blob/ddf59e635a03ef230c179bb9056fe7c4af5188ca/assets/task.png)  
+<img src="https://github.com/Mahesh7741/MovereFac-TODO/blob/ddf59e635a03ef230c179bb9056fe7c4af5188ca/assets/task.png" alt="Task Completion" width="800" height="400"/>  
 *Tasks marked as done with a visual indicator*
 
 ## Installation
