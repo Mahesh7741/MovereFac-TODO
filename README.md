@@ -2,7 +2,7 @@
 
 **MotivateTODO** is a responsive TODO list application designed to inspire action and manage tasks efficiently. With a motivational background and intuitive interface, it helps you keep track of your to-do items and mark them as done with ease.
 
-![MotivateTODO Preview](https://via.placeholder.com/800x400?text=MotivateTODO+Preview)  
+![MotivateTODO Preview]([https://via.placeholder.com/800x400?text=MotivateTODO+Preview](https://github.com/Mahesh7741/MovereFac-TODO/blob/main/assets/Screenshot%202024-08-17%20002521.png?raw=true))  
 *MotivateTODO main interface*
 
 ## Features
